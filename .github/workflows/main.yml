@@ -15,6 +15,8 @@
         - name: Setup Node.js
           uses: actions/setup-node@v2
           with:
-            node-version: ${{ matrix.node-version }}
-        - name: Run a one-line script
-          run: node -v
+            node-version: '14'
+        - name: Install dependencies
+          run: npm install
+        - name: Run tests
+          run: npm test
